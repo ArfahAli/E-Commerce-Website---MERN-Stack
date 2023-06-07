@@ -5,11 +5,30 @@ import Header from "./Header";
 import Footer from "./Footer";
 import "./products.css";
 import List from "../data";
+import Cart from "./cart";
 import Cards from "./cards";
 const Products = () => {
+
+  const [cart, setCart]= useState([]);
+  const[showCart, setShowCart] = useState(false);
+  const addToCart=(data)=>{
+    setCart([...cart, {...data, quantity:1}])
+  }
+
+  const handleShow = (value) => {
+    setShowCart(value);
+  };
+  
+
+  const handleRemove = (id) => {
+    const newCart = cart.filter((item) => item.name !== id);
+    setCart(newCart);
+  };
+  
   return (
     <div>
-      <Header />
+      <Header count ={cart.length} 
+      handleShow={handleShow}/>
       <div className="sub-containerProducts">
         <div className=" row rowProducts">
           <h2>All Products</h2>
@@ -24,20 +43,14 @@ const Products = () => {
       </div>
 
       {/* //  All products  */}
-     
-      <Cards/>
+      {/* {
+        showCart?<Cart cart={cart}/> :<Cards List={List} addToCart={addToCart}/>
 
-      {/* <!-- page Buttons --> */}
-      <div className="sub-containerProducts">
+        
+      } */}
 
-      <div className="pg-btns">
-        <span>1</span>
-        <span>2</span>
-        <span>3</span>
-        <span>4</span>
-        <span className="fas fa-arrow-right"></span>
-      </div>
-      </div>
+      <Cards List={List} addToCart={addToCart}/>
+      <Cart cart={cart} handleRemove={handleRemove}/>
       <Footer />
     </div>
   );

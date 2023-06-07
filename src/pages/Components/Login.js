@@ -1,5 +1,7 @@
 import React from "react"
 import "./Login.css";
+import { Link } from 'react-router-dom';
+
 const LoginSide = () => {
   return (
     <div className="login">
@@ -7,7 +9,9 @@ const LoginSide = () => {
         <form>
             <input type={'text'} placeholder={'Username'}/>
             <input type={'password'} placeholder={'Password'}/>
-            <button className="button">Login</button>
+            <Link to='/'>  <button className="button">Login</button></Link>
+
+          
 
         </form>
     

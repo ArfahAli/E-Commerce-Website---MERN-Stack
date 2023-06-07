@@ -65,7 +65,6 @@
         color: lavender ;
         display: inline-block;
         padding: 8px 31px;
-        margin: 2px 0px;
         border-radius: 10px;
         width: 280%;
     }
@@ -74,9 +73,12 @@
         color: lavender ;
         display: inline-block;
         padding: 8px 0px;
-        margin: 2px 0;
+        margin-top: 100px;
+        margin-right: 100px;
         border-radius: 10px;
-        width: 280%;
+        width: 188%;
+        position: relative;
+        right: 78%;
     }
     .btnContinue:hover, .btnCheckOut:hover{
         background-color: lavender ;

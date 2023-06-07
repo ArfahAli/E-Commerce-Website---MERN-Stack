@@ -1,7 +1,6 @@
 import React from 'react'
 import './cards.css';
-import List from '../data';
-const Cards = () => {
+const Cards = ({List,addToCart}) => {
   return (
     <div>
 
@@ -21,12 +20,23 @@ const Cards = () => {
                  ></i>
                ))}
              </div>
-             <h5>{item.price}</h5>
-             <button className="btnBucket">Add to Bucket</button>
+             <h5>${item.price}</h5>
+             <button
+             onClick={()=>addToCart(item)}
+              className="btnBucket">Add to Bucket</button>
            </div>  
           ))}
                </div>
+                    <div className="sub-containerProducts">
 
+      <div className="pg-btns">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span className="fas fa-arrow-right"></span>
+      </div>
+      </div>
         </div>
                 
     </div>

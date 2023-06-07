@@ -20,6 +20,7 @@ const LoginSignupContainer = () => {
     <div className='LS_Container' ref={LoginSignupContainerRef}>
         <LoginSide />
         <div className='side-div'>
+
             <button className='button' onClick={handleClick}>{Login? "Signup": "Login"}</button>
         </div>
         <Signup/>

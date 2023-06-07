@@ -60,3 +60,12 @@ nav ul li {
 nav ul li a {
     color: black;
 }
+sup{
+    padding: 2px 5px;
+    border: 1px solid red;
+    border-radius: 70%;
+    margin-bottom: 30px;
+    background: red;
+    color: white;
+    font-weight: bold;
+}

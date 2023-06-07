@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./Header.css"
-const Header =({size})=>{
+const Header =(props)=>{
 
-    const navigate= useNavigate();
-    const goToProductDetail=()=>{
-        navigate("/Products");
+ 
+        const navigate =useNavigate();
+    function goToAbout(){
+        navigate("/About");
     }
+
+    
     return(
     <div>
          <div className="containerHeader">
@@ -17,16 +20,21 @@ const Header =({size})=>{
             </div>
             <nav>
             <ul id="MenuItems">
+            {/* onClick={()=>props.handleShow(false)} */}
                                 <li><Link to='/'>Home</Link></li>
-                                <li><Link to='/products'>Products</Link></li>
+                                <li><Link to='/Products'>Products</Link></li>
                                 <li><Link to='/ProductDetails'>Product Details</Link></li>
-                                <li><a href="/Contactus"  >Contact</a></li>
+                                <li><Link to='/Contactus'>Contact Us</Link></li>
+                                <li><Link to='/About'>About Us</Link></li>
                                 <li><Link to='/LoginSignupContainer'>Account</Link></li>
+                                {/* <li><button onClick={goToAbout}>About Us</button></li> */}
+
             </ul>
             </nav>
-          <Link to='/cart'> <img src="ASSETS/images/cart.png" alt="" width="30px" height="30px"/></Link> 
-          <span>{size}</span>
+      <Link to='/cart'><img src="ASSETS/images/cart.png" alt="" width="30px" height="30px" /></Link> 
+          <sup>{props.count}</sup>
         </div>
+        
     </div>
     </div>
     );

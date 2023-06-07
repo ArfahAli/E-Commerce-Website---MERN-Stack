@@ -11,9 +11,9 @@ import Contactus from "./pages/Contactus";
 import CheckOut from "./pages/CheckOut";
 import Payment from "./pages/Payment";
 import OrderConfirmation from "./pages/OrderConfirmation";
+import TermsConditions from "./pages/TermsConditions";
+import About from "./pages/About";
 function App() {
- const [show, setShow]= useState(true);
- const [cart, setCart]= useState([]);
 
   return (
     <div>
@@ -28,11 +28,10 @@ function App() {
       <Route path='/CheckOut' element={<CheckOut/>}/>
       <Route path='/Payment' element={<Payment/>}/>
       <Route path='/OrderConfirmation' element={<OrderConfirmation/>}/>
+      <Route path='/TermsConditions' element={<TermsConditions/>}/>
+      <Route path='/About' element={<About/>}/>
+      </Routes>  
 
-
-
-
-      </Routes>   
     </div>
   );
 }
