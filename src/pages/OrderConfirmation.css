@@ -20,4 +20,15 @@
     color: #777777;
     margin-bottom: 10px;
   }
-  
+  .order-confirmation-button{
+    padding: 10px 20px;
+    font-weight: bold;
+    color: white;
+    background: rgb(63, 5, 63);
+  }
+
+  .order-confirmation-button:hover{
+    background: radial-gradient( lavender,rgb(245, 186, 232));
+    color: black;
+    font-weight: bold;
+}

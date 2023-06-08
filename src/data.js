@@ -2,7 +2,7 @@
 const List = [
   {
     id: 1,
-    image: "ASSETS/images/product-5.jpg",
+    image: "/ASSETS/images/product-5.jpg",
     name: "Grey Shoes",
     rating: [1, 1, 1, 1, 0],
     price: 50.00,
@@ -10,7 +10,7 @@ const List = [
   },
   {
     id: 2,
-    image: "ASSETS/images/product-6.jpg",
+    image: "/ASSETS/images/product-6.jpg",
     name: "Black T-Shirt",
     rating: [1, 1, 1, 0.5, 0],
     price: 60.00,
@@ -19,7 +19,7 @@ const List = [
   },
   {
     id: 3,
-    image: "ASSETS/images/product-7.jpg",
+    image: "/ASSETS/images/product-7.jpg",
     name: "3-Pair of Sockes",
     rating: [1, 1, 1, 1, 0.5],
     price: 30.00,
@@ -28,7 +28,7 @@ const List = [
   },
   {
     id: 4,
-    image: "ASSETS/images/product-8.jpg",
+    image: "/ASSETS/images/product-8.jpg",
     name: "Fossil Watch",
     rating: [1, 1, 1, 1, 1],
     price: 80.00,
@@ -37,7 +37,7 @@ const List = [
   },
   {
     id: 5,
-    image: "ASSETS/images/product-9.jpg",
+    image: "/ASSETS/images/product-9.jpg",
     name: "Watch",
     rating: [1, 1, 1, 1, 0],
     price: 80.00,
@@ -46,7 +46,7 @@ const List = [
   },
   {
     id: 6,
-    image: "ASSETS/images/product-10.jpg",
+    image: "/ASSETS/images/product-10.jpg",
     name: "Black Sneakers",
     rating: [1, 1, 1, 1, 0.5],
     price: 50.00,
@@ -55,7 +55,7 @@ const List = [
   },
   {
     id: 7,
-    image: "ASSETS/images/product-3.jpg",
+    image: "/ASSETS/images/product-3.jpg",
     name: "Brown Trouser",
     rating: [1, 1, 1, 0.5, 1],
     price: 60.00,
@@ -64,7 +64,7 @@ const List = [
   },
   {
     id: 8,
-    image: "ASSETS/images/product-11.jpg",
+    image: "/ASSETS/images/product-11.jpg",
     name: "Comfy Shoes",
     rating: [1, 1, 1, 1, 1],
     price: 70.00,
@@ -73,7 +73,7 @@ const List = [
   },
   {
     id: 9,
-    image: "ASSETS/images/product-12.jpg",
+    image: "/ASSETS/images/product-12.jpg",
     name: "Red T-Shirt",
     rating: [0.5, 1, 1, 1, 0.5],
     price: 50.00,
@@ -82,7 +82,7 @@ const List = [
   },
   {
     id: 10,
-    image: "ASSETS/images/product-5.jpg",
+    image: "/ASSETS/images/product-5.jpg",
     name: "Grey Sneakers",
     rating: [1, 1, 1, 1, 0],
     price: 40.00,
@@ -91,7 +91,7 @@ const List = [
   },
   {
     id: 11,
-    image: "ASSETS/images/product-7.jpg",
+    image: "/ASSETS/images/product-7.jpg",
     name: "Socks",
     rating: [1, 1, 1, 1, 1],
     price: 60.00,
@@ -100,7 +100,7 @@ const List = [
   },
   {
     id: 12,
-    image: "ASSETS/images/product-11.jpg",
+    image: "/ASSETS/images/product-11.jpg",
     name: "Sneakers",
     rating: [1, 1, 1, 1, 0.5],
     price: 70.00,
@@ -108,4 +108,67 @@ const List = [
 
   },
 ];
-export default List;
+
+
+
+
+const testimonials=[
+  {
+    id: 1,
+    quote:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus labore dolor vel repudiandae eveniet ipsa placeat, non quas fuga excepturi illum minima. Adipisci, incidunt hic.",
+    rating: [1, 1, 1, 1, 0],
+    image: "ASSETS/images/user-1.png",
+    name: "Esha Mehmood",
+  },
+  {
+    id: 2,
+    quote:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus labore dolor vel repudiandae eveniet ipsa placeat, non quas fuga excepturi illum minima. Adipisci, incidunt hic.",
+    rating: [1, 1, 1, 1, 0],
+    image: "ASSETS/images/user-2.png",
+    name: "Danyal Ahmed",
+  },
+  {
+    id: 3,
+    quote:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus labore dolor vel repudiandae eveniet ipsa placeat, non quas fuga excepturi illum minima. Adipisci, incidunt hic.",
+    rating: [1, 1, 1, 1, 0],
+    image: "ASSETS/images/user-3.png",
+    name: "Hifsa Rehman",
+  },
+];
+
+const Featuredproducts=[
+  {
+    id: 1,
+    image: "ASSETS/images/product-1.jpg",
+    name: "Red T-Shirt",
+    rating: [1, 1, 1, 1, 0],
+    price: "$50.00",
+  },
+  {
+    id: 2,
+    image: "ASSETS/images/product-2.jpg",
+    name: "Black Sneakers",
+    rating: [1, 1, 1, 0.5, 0],
+    price: "$40.00",
+  },
+  {
+    id: 3,
+    image: "ASSETS/images/product-3.jpg",
+    name: "Grey Trouser",
+    rating: [1, 1, 1, 1, 0.5],
+    price: "$60.00",
+  },
+  {
+    id: 4,
+    image: "ASSETS/images/product-4.jpg",
+    name: "Navy Blue T-Shirt",
+    rating: [1, 1, 1, 1, 1],
+    price: "$70.00",
+  },
+];
+
+
+export default {List,testimonials, Featuredproducts};

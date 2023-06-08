@@ -20,8 +20,8 @@
     th{
         text-align: left;
         padding: 5px;
-        color: black;
-        background: rgb(245, 186, 232);
+        color: white;
+        background: rgb(56, 5, 56);
         font-weight: normal;
     }
    
@@ -36,7 +36,7 @@
         padding: 5px;
     }
     td  a{
-        color:purple;
+        color:rgb(56, 5, 56);
         font-size: 12px;
     }
     td img{
@@ -50,7 +50,7 @@
 
     }
     .total-price table{
-        border-top: 3px solid purple;
+        border-top: 3px solid rgb(56, 5, 56);
         width: 100%;
         max-width: 360px;
     }
@@ -61,7 +61,7 @@
         text-align: right;
     }
     .btnCheckOut {
-        background-color:rgb(146, 12, 146);
+        background-color:rgb(56, 5, 56);
         color: lavender ;
         display: inline-block;
         padding: 8px 31px;
@@ -69,7 +69,7 @@
         width: 280%;
     }
     .btnContinue {
-        background-color:rgb(146, 12, 146);
+        background-color:rgb(56, 5, 56);
         color: lavender ;
         display: inline-block;
         padding: 8px 0px;
@@ -82,8 +82,27 @@
     }
     .btnContinue:hover, .btnCheckOut:hover{
         background-color: lavender ;
-        color:rgb(146, 12, 146) ;
+        color:rgb(56, 5, 56) ;
         transition: 0.4s;
         font-weight: bold;
         transform: 0.5s;
     }
+    .Removebtn{
+        color: white;
+        transition: 0.4s;
+        padding: 5px 5px;
+        font-weight: bold;
+        transform: 0.5s;
+        background: rgb(56, 5, 56);
+    }
+
+    .quantityCart button {
+        padding: 10px 15px;
+        margin-right: 10px;
+        margin-left: 10px;
+        color: aliceblue;
+        background-color: rgb(63, 5, 63);
+        border-radius: 5px;
+        border: none;
+        font-size: 20px;
+      }

@@ -23,7 +23,9 @@ const Header =(props)=>{
             {/* onClick={()=>props.handleShow(false)} */}
                                 <li><Link to='/'>Home</Link></li>
                                 <li><Link to='/Products'>Products</Link></li>
-                                <li><Link to='/ProductDetails'>Product Details</Link></li>
+                                {/* <li onClick={() => props.handleShow(false)}>Products</li> */}
+
+                                {/* <li><Link to='/ProductDetails'>Product Details</Link></li> */}
                                 <li><Link to='/Contactus'>Contact Us</Link></li>
                                 <li><Link to='/About'>About Us</Link></li>
                                 <li><Link to='/LoginSignupContainer'>Account</Link></li>
@@ -31,7 +33,14 @@ const Header =(props)=>{
 
             </ul>
             </nav>
-      <Link to='/cart'><img src="ASSETS/images/cart.png" alt="" width="30px" height="30px" /></Link> 
+            {/* <img
+            onClick={() => props.handleShow(true)}
+            src="/ASSETS/images/cart.png"
+            alt=""
+            width="30px"
+            height="30px"
+          /> */}
+      <Link to='/cart'><img src="/ASSETS/images/cart.png" alt="" width="30px" height="30px" /></Link> 
           <sup>{props.count}</sup>
         </div>
         

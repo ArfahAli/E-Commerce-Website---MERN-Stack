@@ -13,14 +13,14 @@ const Footer =() => {
                             <h3>Download our App</h3>
                             <p>Download app for Android and IOs</p>
                             <div className="app-logos">
-                                <img src="ASSETS/images/play-store.png" alt=""/>
-                                <img src="ASSETS/images/app-store.png" alt=""/>
+                                <img src="/ASSETS/images/play-store.png" alt=""/>
+                                <img src="/ASSETS/images/app-store.png" alt=""/>
                             </div>
 
                         </div>
 
                         <div className="footer-col-2">
-                            <img src="ASSETS/images/logo-white.png" alt=""/>
+                            <img src="/ASSETS/images/logo-white.png" alt=""/>
                             <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the
                                 Many. </p>
                         </div>

@@ -1,3 +1,6 @@
+.bodyLogin{
+    height: 100vh;
+}
 .LS_Container{
 
     display: grid;
@@ -11,7 +14,6 @@
     margin-left: auto;
     margin-right: auto;
     transition: 0.3s linear;
-
 }
 .LS_Container.active{
     grid-template-columns: 0% 30% 70%;

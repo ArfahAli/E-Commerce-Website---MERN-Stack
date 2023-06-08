@@ -20,7 +20,7 @@
 
 .containerPayment form{
   padding:20px;
-  width:700px;
+  width:100%;
   background: #fff;
   box-shadow: 0 5px 10px rgba(0,0,0,.1);
 }
@@ -82,7 +82,7 @@
   width: 100%;
   padding:12px;
   font-size: 17px;
-  background: purple;
+  background: rgb(63, 5, 63);
   color:#fff;
   margin-top: 5px;
   cursor: pointer;

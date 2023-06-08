@@ -1,60 +1,176 @@
-import { BrowserRouter } from "react-router-dom";
+
+// import { Link, useNavigate } from "react-router-dom";
+// import { useState } from "react";
+// import Header from "./Header";
+// import Footer from "./Footer";
+// import "./products.css";
+// import data from '../data';
+// import Cart from "./cart";
+// import Cards from "./cards";
+
+// const Products = () => {
+//   const { List, testimonials, Featuredproducts } = data;
+
+//   const navigate = useNavigate();
+
+//   const [cart, setCart] = useState([]);
+//   const [showCart, setShowCart] = useState(false);
+
+
+//   const addToCart = (data) => {
+//     const existingProduct = cart.find((item) => item.id === data.id);
+//     if (existingProduct) {
+//       // Product already exists in the cart, update the quantity
+//       const updatedCart = cart.map((item) =>
+//         item.id === data.id ? { ...item, quantity: item.quantity + 1 } : item
+//       );
+//       setCart(updatedCart);
+//     } else {
+//       // Product doesn't exist in the cart, add it with quantity 1
+//       setCart([...cart, { ...data, quantity: 1 }]);
+//     }
+//   };
+
+//   const handleShow = (value) => {
+//     setShowCart(value);
+//   };
+
+//   const handleRemove = (id) => {
+//     const newCart = cart.filter((item) => item.id !== id);
+//     setCart(newCart);
+//   };
+  
+//   const handleProductClick = (product) => {
+//     navigate(`/product/${product.id}`, { state: { product } });
+
+//   };
+//   return (
+//     <div>
+//       <Header count={cart.length} handleShow={handleShow} />
+//       <div className="sub-containerProducts">
+//         <div className="row rowProducts">
+//           <h2>All Products</h2>
+//           <select>
+//             <option value="">Default Sorting</option>
+//             <option value="">Sort by Price</option>
+//             <option value="">Sort by Popularity</option>
+//             <option value="">Sort by Rating</option>
+//             <option value="">Sort by Sale</option>
+//           </select>
+//         </div>
+//       </div>
+//       <div className="sub-containerProducts">
+      
+//       <div className="rowProducts">
+//       {List.map((product) => (
+//           <Cards product={product} addToCart={addToCart} handleProductClick={handleProductClick}/>
+//         ))}
+//       </div>
+
+// <div className="pg-btns">
+//   <span>1</span>
+//   <span>2</span>
+//   <span>3</span>
+//   <span>4</span>
+//   <span className="fas fa-arrow-right"></span>
+// </div>
+//     </div>
+// {
+//   showCart? <Cart cart={cart} handleRemove={handleRemove} /> :<Cards List={List} addToCart={addToCart} />
+
+// }
+      
+//       <Footer />
+//     </div>
+//   );
+// };
+
+// export default Products;
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import "./products.css";
-import List from "../data";
+import data from '../data';
 import Cart from "./cart";
 import Cards from "./cards";
-const Products = () => {
 
-  const [cart, setCart]= useState([]);
-  const[showCart, setShowCart] = useState(false);
-  const addToCart=(data)=>{
-    setCart([...cart, {...data, quantity:1}])
-  }
+const Products = () => {
+  const { List, testimonials, Featuredproducts } = data;
+
+  const navigate = useNavigate();
+
+  const [cart, setCart] = useState([]);
+  const [showCart, setShowCart] = useState(false);
+
+
+  const addToCart = (data) => {
+    const existingProduct = cart.find((item) => item.id === data.id);
+    if (existingProduct) {
+      // Product already exists in the cart, update the quantity
+      const updatedCart = cart.map((item) =>
+        item.id === data.id ? { ...item, quantity: item.quantity + 1 } : item
+      );
+      setCart(updatedCart);
+    } else {
+      // Product doesn't exist in the cart, add it with quantity 1
+      setCart([...cart, { ...data, quantity: 1 }]);
+    }
+  };
 
   const handleShow = (value) => {
     setShowCart(value);
   };
-  
 
   const handleRemove = (id) => {
-    const newCart = cart.filter((item) => item.name !== id);
+    const newCart = cart.filter((item) => item.id !== id);
     setCart(newCart);
   };
   
+  const handleProductClick = (product) => {
+    navigate(`/product/${product.id}`, { state: { product } });
+
+  };
   return (
     <div>
-      <Header count ={cart.length} 
-      handleShow={handleShow}/>
+      <Header count={cart.length}  />
       <div className="sub-containerProducts">
-        <div className=" row rowProducts">
+        <div className="row rowProducts">
           <h2>All Products</h2>
           <select>
-            <option value="">Defaul Shorting</option>
-            <option value="">Short by Price</option>
-            <option value="">Short by Pouplarity</option>
-            <option value="">Short by Rating</option>
-            <option value="">Short by Sale</option>
+            <option value="">Default Sorting</option>
+            <option value="">Sort by Price</option>
+            <option value="">Sort by Popularity</option>
+            <option value="">Sort by Rating</option>
+            <option value="">Sort by Sale</option>
           </select>
         </div>
       </div>
+      <div className="sub-containerProducts">
+      
+      <div className="rowProducts">
+      {List.map((product) => (
+          <Cards product={product} addToCart={addToCart} handleProductClick={handleProductClick}/>
+        ))}
+      </div>
 
-      {/* //  All products  */}
-      {/* {
-        showCart?<Cart cart={cart}/> :<Cards List={List} addToCart={addToCart}/>
-
-        
-      } */}
-
-      <Cards List={List} addToCart={addToCart}/>
-      <Cart cart={cart} handleRemove={handleRemove}/>
+<div className="pg-btns">
+ <Link to='./product2'><span>1</span></Link> 
+ <Link to='./product2'><span>2</span></Link> 
+ <Link to='./product2'><span>3</span></Link> 
+ <Link to='./product2'><span>4</span></Link> 
+  <span className="fas fa-arrow-right"></span>
+</div>
+    </div>
+    {/* <Cards List={List} addToCart={addToCart} /> */}
+{/* {
+  showCart? <Cart cart={cart} handleRemove={handleRemove} /> : null
+} */}
+<Cart cart={cart} handleRemove={handleRemove} /> 
+      
       <Footer />
     </div>
   );
 };
 
 export default Products;
-

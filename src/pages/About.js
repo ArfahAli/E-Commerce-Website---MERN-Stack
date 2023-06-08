@@ -15,12 +15,12 @@ const About = () => {
 <div className="rowTeam">
   <div className="columnTeam">
     <div className="cardTeam">
-      <img src="ASSETS/images/user-1.png" alt="Jane" style={{width:'100%'}}/>
+      <img src="ASSETS/images/Team1.jpg" alt="Jane" style={{width:'100%'}}/>
       <div className="containerTeam">
-        <h2>Jane Doe</h2>
+        <h2>Hamza Ali</h2>
         <p className="titleTeam">CEO & Founder</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>jane@example.com</p>
+        <p>He built the Store in 2001 as a CEO & Founder.</p>
+        <p>Hamza@example.com</p>
         <p><button className="buttonTeam">Contact</button></p>
       </div>
     </div>
@@ -28,12 +28,12 @@ const About = () => {
 
   <div className="columnTeam">
     <div className="cardTeam">
-      <img src="ASSETS/images/user-2.png" alt="Mike" style={{width:'100%'}}/>
+      <img src="ASSETS/images/Team1 (2).jpg" alt="Mike" style={{width:'100%'}}/>
       <div className="containerTeam">
-        <h2>Mike Ross</h2>
-        <p className="titleTeam">Art Director</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>mike@example.com</p>
+        <h2>Miss Ross</h2>
+        <p className="titleTeam"> Director</p>
+        <p>She has been working as a Directer since 2005.</p>
+        <p>Ross@example.com</p>
         <p><button className="buttonTeam">Contact</button></p>
       </div>
     </div>
@@ -41,12 +41,12 @@ const About = () => {
 
   <div className="columnTeam">
     <div className="cardTeam">
-      <img src="ASSETS/images/user-3.png" alt="John" style={{width:'100%'}}/>
+      <img src="ASSETS/images/Team1 (1).jpg" alt="John" style={{width:'100%'}}/>
       <div className="containerTeam">
-        <h2>John Doe</h2>
+        <h2>Miss Sofia</h2>
         <p className="titleTeam">Designer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>john@example.com</p>
+        <p>She has been working as a Designer since 2005.</p>
+        <p>Sofia@example.com</p>
         <p><button className="buttonTeam">Contact</button></p>
       </div>
     </div>
@@ -54,6 +54,7 @@ const About = () => {
 </div>
 
     <h2></h2>
+    <Footer />
 
     </div>
   )

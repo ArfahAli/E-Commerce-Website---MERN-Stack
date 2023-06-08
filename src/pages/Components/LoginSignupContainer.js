@@ -15,7 +15,7 @@ const LoginSignupContainer = () => {
     }
 
   return (
-    <div>
+    <div className='bodyLogin'>
       <Navigation/>
     <div className='LS_Container' ref={LoginSignupContainerRef}>
         <LoginSide />
@@ -25,6 +25,7 @@ const LoginSignupContainer = () => {
         </div>
         <Signup/>
     </div>
+
     </div>
   )
 }

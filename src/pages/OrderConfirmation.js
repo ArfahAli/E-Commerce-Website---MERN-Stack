@@ -1,5 +1,6 @@
 import React from 'react';
 import './OrderConfirmation.css'; // Import the CSS file for styling
+import { Link } from 'react-router-dom';
 
 const OrderConfirmation = () => {
   return (
@@ -10,6 +11,7 @@ const OrderConfirmation = () => {
         <p className="order-confirmation-message">An email with the order details has been sent to your registered email address.</p>
         <p className="order-confirmation-message">If you have any questions or need further assistance, please don't hesitate to contact our customer support.</p>
       </div>
+   <Link to='/products'> <button className="order-confirmation-button">Continue Shopping</button></Link>  
     </div>
   );
 };

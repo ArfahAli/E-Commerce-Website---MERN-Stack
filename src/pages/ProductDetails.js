@@ -1,14 +1,17 @@
 import { useState } from "react";
 import { useReducer } from "react";
 import Header from "./Header";
+import { useLocation } from 'react-router-dom';
 import Footer from "./Footer";
 import "./ProductDetails.css";
-import { type } from "@testing-library/user-event/dist/type";
 const ProductDetail = () => {
+  const location = useLocation();
+  const { product } = location.state;
 
-  const [products] = useState([
+  const [Relatedproducts] = useState([
     {
-      imageSrc: "ASSETS/images/product-12.jpg",
+      id: "1",
+      imageSrc: "/ASSETS/images/product-12.jpg",
       name: "Red T-Shirt",
       rating: [
         "fa-regular fa-star",
@@ -17,10 +20,11 @@ const ProductDetail = () => {
         "fa-solid fa-star",
         "fa-regular fa-star-half-stroke",
       ],
-      price: "$50.00",
+      price: 50.00,
     },
     {
-      imageSrc: "ASSETS/images/product-5.jpg",
+      id: "2",
+      imageSrc: "/ASSETS/images/product-5.jpg",
       name: "Grey Sneakers",
       rating: [
         "fa-solid fa-star",
@@ -29,10 +33,11 @@ const ProductDetail = () => {
         "fa-solid fa-star",
         "fa-regular fa-star",
       ],
-      price: "$40.00",
+      price: 40.00,
     },
     {
-      imageSrc: "ASSETS/images/product-7.jpg",
+      id: "3",
+      imageSrc: "/ASSETS/images/product-7.jpg",
       name: "Socks",
       rating: [
         "fa-solid fa-star",
@@ -41,11 +46,12 @@ const ProductDetail = () => {
         "fa-solid fa-star",
         "fa-solid fa-star",
       ],
-      price: "$60.00",
+      price: 60.00,
     },
 
     {
-      imageSrc: "ASSETS/images/product-11.jpg",
+      id: "4",
+      imageSrc: "/ASSETS/images/product-11.jpg",
       name: "Sneakers",
       rating: [
         "fa-solid fa-star",
@@ -54,7 +60,7 @@ const ProductDetail = () => {
         "fa-solid fa-star",
         "fa-regular fa-star-half-stroke",
       ],
-      price: "$70.00",
+      price: 70.00,
     },
   ]);
     
@@ -80,47 +86,12 @@ const ProductDetail = () => {
       <div class="sub-container single-product">
         <div class="rowDetails">
           <div class="col-2">
-            <img src="ASSETS/images/gallery-1.jpg" alt="" id="productImg" />
-
-            <div class="small-image-row">
-              <div class="small-image-col">
-                <img
-                  src="ASSETS/images/gallery-1.jpg"
-                  alt=""
-                  width="100%"
-                  class="small-img"
-                />
-              </div>
-              <div class="small-image-col">
-                <img
-                  src="ASSETS/images/gallery-2.jpg"
-                  alt=""
-                  width="100%"
-                  class="small-img"
-                />
-              </div>
-              <div class="small-image-col">
-                <img
-                  src="ASSETS/images/gallery-3.jpg"
-                  alt=""
-                  width="100%"
-                  class="small-img"
-                />
-              </div>
-              <div class="small-image-col">
-                <img
-                  src="ASSETS/images/gallery-4.jpg"
-                  alt=""
-                  width="100%"
-                  class="small-img"
-                />
-              </div>
-            </div>
+            <img src={product.image} alt="" id="productImg" />
           </div>
           <div class="col-2">
-            <p>Home / T-Shirt</p>
-            <h1>Red Printed T-shirt by Junaid Jamshed</h1>
-            <h4>$50.00</h4>
+            <p>Home / {product.name}</p>
+            <h1>{product.name}</h1>
+            <h4>{product.price}</h4>
             <select>
               <option value="">Select Size</option>
               <option value="">XXL</option>
@@ -155,22 +126,24 @@ const ProductDetail = () => {
       <div className="sub-containerDetails">
       <h2>Related Products</h2>
         <div className="rowDetails">
-          {products.map((product, index) => (
+          {Relatedproducts
+          .map((item, index) => (
             <div className="col-4" key={index}>
-              <img src={product.imageSrc} alt="" />
-              <h4>{product.name}</h4>
+              <img src={item.imageSrc} alt="" />
+              <h4>{item.name}</h4>
               <div className="ratings">
-                {product.rating.map((rating, index) => (
+                {item.rating.map((rating, index) => (
                   <i className={rating} key={index}></i>
                 ))}
               </div>
-              <h5>{product.price}</h5>
+              <h5>{item.price}</h5>
             </div>
           ))}
         </div>
       </div>
-      <Footer />
     </div>
+    <Footer />
+
     </div>
   );
 };

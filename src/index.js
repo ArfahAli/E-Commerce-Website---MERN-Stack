@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 // import "bootstrap/dist/css/bootstrap.css"
 import { BrowserRouter} from 'react-router-dom';
 import { createRoot} from 'react-dom';
+import Cart from './pages/cart';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
