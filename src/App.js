@@ -12,17 +12,16 @@ import OrderConfirmation from "./pages/Notifications/OrderConfirmation";
 import TermsConditions from "./pages/Notifications/TermsConditions";
 import About from "./pages/About/About";
 import Product2 from "./pages/Products/product2";
-import HomPage from "./pages/Home/HomPage";
+import { AppProvider } from './pages/Home/AppProvider';
+
 function App() {
   return (
     <div>
+      <AppProvider>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Products" element={<Products />} />
-        <Route
-          path="/LoginSignupContainer"
-          element={<LoginSignupContainer />}
-        />
+        <Route path="/LoginSignupContainer"element={<LoginSignupContainer />}/>
         <Route path="/Cart" element={<Cart />} />
         <Route path="/ProductDetails" element={<ProductDetail />} />
         <Route path="/Contactus" element={<Contactus />} />
@@ -33,6 +32,7 @@ function App() {
         <Route path="/product/:id" element={<ProductDetail />} />
         <Route path="/product2" element={<Product2 />} />
       </Routes>
+      </AppProvider>
     </div>
   );
 }

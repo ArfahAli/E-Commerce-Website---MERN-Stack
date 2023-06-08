@@ -3,15 +3,17 @@ import Header from "../HeaderPage/Header";
 import Footer from "../Footer/Footer";
 import data from "../../data";
 import "./Home.css";
-import { useContext } from "react";
-import MyContext from "./MyContext";
+import React, { useContext } from "react";
+import { AppContext } from "./AppProvider"
 const Home = () => {
   const { List, testimonials } = data;
-  const Featuredproducts = useContext(MyContext);
+  const { Featuredproducts } = useContext(AppContext);
+
   const navigate = useNavigate();
   const handleProductClick = (product) => {
     navigate(`/product/${product.id}`, { state: { product } });
   };
+
   return (
     <div>
       <div className="header">
@@ -61,13 +63,13 @@ const Home = () => {
       <div className="sub-container">
         <h2 className="tittle">Featured Products</h2>
         <div className="row">
-        {Featuredproducts && Featuredproducts.map((product) => (
+          {Featuredproducts.map((product) => (
             <div className="col-4" key={product.id}>
               <img
                 onClick={() => handleProductClick(product)}
                 src={product.image}
                 alt=""
-              />{" "}
+              />
               <h4>{product.name}</h4>
               <div className="ratings">
                 {product.rating.map((star, index) => (
