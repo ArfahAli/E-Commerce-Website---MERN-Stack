@@ -1,4 +1,3 @@
-
 // import { Link, useNavigate } from "react-router-dom";
 // import { useState } from "react";
 // import Header from "./Header";
@@ -15,7 +14,6 @@
 
 //   const [cart, setCart] = useState([]);
 //   const [showCart, setShowCart] = useState(false);
-
 
 //   const addToCart = (data) => {
 //     const existingProduct = cart.find((item) => item.id === data.id);
@@ -39,7 +37,7 @@
 //     const newCart = cart.filter((item) => item.id !== id);
 //     setCart(newCart);
 //   };
-  
+
 //   const handleProductClick = (product) => {
 //     navigate(`/product/${product.id}`, { state: { product } });
 
@@ -60,7 +58,7 @@
 //         </div>
 //       </div>
 //       <div className="sub-containerProducts">
-      
+
 //       <div className="rowProducts">
 //       {List.map((product) => (
 //           <Cards product={product} addToCart={addToCart} handleProductClick={handleProductClick}/>
@@ -79,7 +77,7 @@
 //   showCart? <Cart cart={cart} handleRemove={handleRemove} /> :<Cards List={List} addToCart={addToCart} />
 
 // }
-      
+
 //       <Footer />
 //     </div>
 //   );
@@ -88,10 +86,10 @@
 // export default Products;
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "../HeaderPage/Header";
+import Footer from "../Footer/Footer";
 import "./products.css";
-import data from '../data';
+import data from "../../data";
 import Cart from "./cart";
 import Cards from "./cards";
 
@@ -102,7 +100,6 @@ const Products = () => {
 
   const [cart, setCart] = useState([]);
   const [showCart, setShowCart] = useState(false);
-
 
   const addToCart = (data) => {
     const existingProduct = cart.find((item) => item.id === data.id);
@@ -126,14 +123,13 @@ const Products = () => {
     const newCart = cart.filter((item) => item.id !== id);
     setCart(newCart);
   };
-  
+
   const handleProductClick = (product) => {
     navigate(`/product/${product.id}`, { state: { product } });
-
   };
   return (
     <div>
-      <Header count={cart.length}  />
+      <Header count={cart.length} />
       <div className="sub-containerProducts">
         <div className="row rowProducts">
           <h2>All Products</h2>
@@ -147,27 +143,38 @@ const Products = () => {
         </div>
       </div>
       <div className="sub-containerProducts">
-      
-      <div className="rowProducts">
-      {List.map((product) => (
-          <Cards product={product} addToCart={addToCart} handleProductClick={handleProductClick}/>
-        ))}
-      </div>
+        <div className="rowProducts">
+          {List.map((product) => (
+            <Cards
+              product={product}
+              addToCart={addToCart}
+              handleProductClick={handleProductClick}
+            />
+          ))}
+        </div>
 
-<div className="pg-btns">
- <Link to='./product2'><span>1</span></Link> 
- <Link to='./product2'><span>2</span></Link> 
- <Link to='./product2'><span>3</span></Link> 
- <Link to='./product2'><span>4</span></Link> 
-  <span className="fas fa-arrow-right"></span>
-</div>
-    </div>
-    {/* <Cards List={List} addToCart={addToCart} /> */}
-{/* {
+        <div className="pg-btns">
+          <Link to="./product2">
+            <span>1</span>
+          </Link>
+          <Link to="./product2">
+            <span>2</span>
+          </Link>
+          <Link to="./product2">
+            <span>3</span>
+          </Link>
+          <Link to="./product2">
+            <span>4</span>
+          </Link>
+          <span className="fas fa-arrow-right"></span>
+        </div>
+      </div>
+      {/* <Cards List={List} addToCart={addToCart} /> */}
+      {/* {
   showCart? <Cart cart={cart} handleRemove={handleRemove} /> : null
 } */}
-<Cart cart={cart} handleRemove={handleRemove} /> 
-      
+      <Cart cart={cart} handleRemove={handleRemove} />
+
       <Footer />
     </div>
   );

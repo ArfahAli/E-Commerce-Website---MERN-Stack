@@ -25,7 +25,6 @@
 //     });
 //   };
 
-  
 //   const totalPrice = useMemo(() => {
 //     return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 //   }, [cartItems]);
@@ -63,7 +62,7 @@
 //               <td>{cartItem.price * cartItem.quantity}</td>
 //             </tr>
 //           ))}
-       
+
 //         </table>
 //         <div className="total-price">
 //           <table>
@@ -88,10 +87,10 @@
 
 // export default Cart;
 import { Link } from "react-router-dom";
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState, useMemo } from "react";
 import "./cart.css";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "../HeaderPage/Header";
+import Footer from "../Footer/Footer";
 
 const Cart = ({ cart, handleRemove }) => {
   const [cartItems, setCartItems] = useState([]);
@@ -101,23 +100,28 @@ const Cart = ({ cart, handleRemove }) => {
   }, [cart]);
 
   const incrementQuantity = (cartIndex) => {
-    setCartItems(prevCartItems => {
+    setCartItems((prevCartItems) => {
       return prevCartItems.map((item, index) =>
-        (cartIndex === index) ? { ...item, quantity: item.quantity + 1 } : item
+        cartIndex === index ? { ...item, quantity: item.quantity + 1 } : item
       );
     });
   };
 
   const decrementQuantity = (cartIndex) => {
-    setCartItems(prevCartItems => {
+    setCartItems((prevCartItems) => {
       return prevCartItems.map((item, index) =>
-        (cartIndex === index && item.quantity > 1) ? { ...item, quantity: item.quantity - 1 } : item
+        cartIndex === index && item.quantity > 1
+          ? { ...item, quantity: item.quantity - 1 }
+          : item
       );
     });
   };
 
   const totalPrice = useMemo(() => {
-    return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+    return cartItems.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0
+    );
   }, [cartItems]);
 
   return (
@@ -139,21 +143,29 @@ const Cart = ({ cart, handleRemove }) => {
                     <p>{cartItem.name}</p>
                     <small>Price: ${cartItem.price}</small>
                     <br />
-                    <button onClick={() => handleRemove(cartItem.id)} className="Removebtn">Remove</button>
+                    <button
+                      onClick={() => handleRemove(cartItem.id)}
+                      className="Removebtn"
+                    >
+                      Remove
+                    </button>
                   </div>
                 </div>
               </td>
               <td>
                 <div className="quantityCart">
-                  <button onClick={() => decrementQuantity(cartIndex)}>-</button>
+                  <button onClick={() => decrementQuantity(cartIndex)}>
+                    -
+                  </button>
                   <span>{cartItem.quantity}</span>
-                  <button onClick={() => incrementQuantity(cartIndex)}>+</button>
+                  <button onClick={() => incrementQuantity(cartIndex)}>
+                    +
+                  </button>
                 </div>
               </td>
               <td>$ {cartItem.price * cartItem.quantity}</td>
             </tr>
           ))}
-       
         </table>
         <div className="total-price">
           <table>
@@ -163,10 +175,14 @@ const Cart = ({ cart, handleRemove }) => {
             </tr>
             <tr>
               <td>
-                <Link to='/Payment'><button className='btnCheckOut'>CheckOut</button></Link>
+                <Link to="/Payment">
+                  <button className="btnCheckOut">CheckOut</button>
+                </Link>
               </td>
               <td>
-                <Link to='/products'><button className='btnContinue'>Continue Shopping</button></Link>
+                <Link to="/products">
+                  <button className="btnContinue">Continue Shopping</button>
+                </Link>
               </td>
             </tr>
           </table>
@@ -175,6 +191,6 @@ const Cart = ({ cart, handleRemove }) => {
       {/* <Footer /> */}
     </div>
   );
-}
+};
 
 export default Cart;

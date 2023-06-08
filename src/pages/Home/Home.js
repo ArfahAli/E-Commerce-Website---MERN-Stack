@@ -1,12 +1,13 @@
 import { useNavigate } from "react-router-dom";
-import Header from "./Header";
-import Footer from "./Footer";
-import data from '../data';
+import Header from "../HeaderPage/Header";
+import Footer from "../Footer/Footer";
+import data from "../../data";
 import "./Home.css";
+import { useContext } from "react";
+import MyContext from "./MyContext";
 const Home = () => {
-  
-  const { List, testimonials, Featuredproducts } = data;
-
+  const { List, testimonials } = data;
+  const Featuredproducts = useContext(MyContext);
   const navigate = useNavigate();
   const handleProductClick = (product) => {
     navigate(`/product/${product.id}`, { state: { product } });
@@ -60,9 +61,13 @@ const Home = () => {
       <div className="sub-container">
         <h2 className="tittle">Featured Products</h2>
         <div className="row">
-          {Featuredproducts.map((product) => (
+        {Featuredproducts && Featuredproducts.map((product) => (
             <div className="col-4" key={product.id}>
-              <img src={product.image} alt="" />
+              <img
+                onClick={() => handleProductClick(product)}
+                src={product.image}
+                alt=""
+              />{" "}
               <h4>{product.name}</h4>
               <div className="ratings">
                 {product.rating.map((star, index) => (
@@ -74,7 +79,7 @@ const Home = () => {
                   ></i>
                 ))}
               </div>
-              <h5>{product.price}</h5>
+              <h5>price: ${product.price}</h5>
             </div>
           ))}
         </div>
@@ -103,7 +108,7 @@ const Home = () => {
                   ></i>
                 ))}
               </div>
-              <h5>$ {product.price}</h5>
+              <h5>price: $ {product.price}</h5>
             </div>
           ))}
         </div>
