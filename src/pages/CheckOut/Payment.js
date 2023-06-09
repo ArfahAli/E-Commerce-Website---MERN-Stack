@@ -1,23 +1,22 @@
-import React, { useState } from 'react';
-import './Payment.css';
-import { Link } from 'react-router-dom';
-import Header from './../HeaderPage/Header';
-import Footer from './../Footer/Footer';
-
+import React, { useState } from "react";
+import "./Payment.css";
+import { Link } from "react-router-dom";
+import Header from "./../HeaderPage/Header";
+import Footer from "./../Footer/Footer";
 
 const Payment = () => {
   const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    address: '',
-    city: '',
-    state: '',
-    zipCode: '',
-    cardName: '',
-    cardNumber: '',
-    expMonth: '',
-    expYear: '',
-    cvv: '',
+    fullName: "",
+    email: "",
+    address: "",
+    city: "",
+    state: "",
+    zipCode: "",
+    cardName: "",
+    cardNumber: "",
+    expMonth: "",
+    expYear: "",
+    cvv: "",
   });
 
   const handleInputChange = (e) => {
@@ -36,7 +35,7 @@ const Payment = () => {
 
   return (
     <div>
-        <Header/>   
+      <Header />
       <div className="containerPayment">
         <form onSubmit={handleSubmit}>
           <div className="payment-row">
@@ -166,11 +165,15 @@ const Payment = () => {
             </div>
           </div>
           <Link to="/OrderConfirmation">
-            <input type="submit" value="proceed to checkout" className="submit-btn" />
+            <input
+              type="submit"
+              value="proceed to Shipping"
+              className="submit-btn"
+            />
           </Link>
         </form>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

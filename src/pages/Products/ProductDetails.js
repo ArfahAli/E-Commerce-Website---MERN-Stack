@@ -7,7 +7,6 @@ import "./ProductDetails.css";
 const ProductDetail = () => {
   const location = useLocation();
   const { product } = location.state;
-
   const [Relatedproducts] = useState([
     {
       id: "1",
@@ -63,7 +62,7 @@ const ProductDetail = () => {
       price: 70.0,
     },
   ]);
-
+  
   const reducer = (state, action) => {
     if (action.type === "Increement") {
       return { quantity: state.quantity + 1 };

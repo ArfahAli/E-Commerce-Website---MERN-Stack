@@ -1,4 +1,3 @@
-// const [Latestproducts, setLatestproducts] = useState([
 const List = [
   {
     id: 1,
@@ -108,17 +107,13 @@ const List = [
 
   },
 ];
-
-
-
-
 const testimonials=[
   {
     id: 1,
     quote:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus labore dolor vel repudiandae eveniet ipsa placeat, non quas fuga excepturi illum minima. Adipisci, incidunt hic.",
     rating: [1, 1, 1, 1, 0],
-    image: "ASSETS/images/user-1.png",
+    image: "/ASSETS/images/user-1.png",
     name: "Esha Mehmood",
   },
   {
@@ -126,7 +121,7 @@ const testimonials=[
     quote:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus labore dolor vel repudiandae eveniet ipsa placeat, non quas fuga excepturi illum minima. Adipisci, incidunt hic.",
     rating: [1, 1, 1, 1, 0],
-    image: "ASSETS/images/user-2.png",
+    image: "/ASSETS/images/user-2.png",
     name: "Danyal Ahmed",
   },
   {
@@ -134,41 +129,9 @@ const testimonials=[
     quote:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus labore dolor vel repudiandae eveniet ipsa placeat, non quas fuga excepturi illum minima. Adipisci, incidunt hic.",
     rating: [1, 1, 1, 1, 0],
-    image: "ASSETS/images/user-3.png",
+    image: "/ASSETS/images/user-3.png",
     name: "Hifsa Rehman",
   },
 ];
-
-// const Featuredproducts=[
-//   {
-//     id: 1,
-//     image: "/ASSETS/images/product-1.jpg",
-//     name: "Red T-Shirt",
-//     rating: [1, 1, 1, 1, 0],
-//     price: 50.00,
-//   },
-//   {
-//     id: 2,
-//     image: "/ASSETS/images/product-2.jpg",
-//     name: "Black Sneakers",
-//     rating: [1, 1, 1, 0.5, 0],
-//     price: 40.00
-//   },
-//   {
-//     id: 3,
-//     image: "/ASSETS/images/product-3.jpg",
-//     name: "Grey Trouser",
-//     rating: [1, 1, 1, 1, 0.5],
-//     price: 60.00,
-//   },
-//   {
-//     id: 4,
-//     image: "/ASSETS/images/product-4.jpg",
-//     name: "Navy Blue T-Shirt",
-//     rating: [1, 1, 1, 1, 1],
-//     price: 70.00,
-//   },
-// ];
-
 
 export default {List,testimonials};

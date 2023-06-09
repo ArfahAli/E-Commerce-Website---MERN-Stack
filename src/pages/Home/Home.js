@@ -4,7 +4,7 @@ import Footer from "../Footer/Footer";
 import data from "../../data";
 import "./Home.css";
 import React, { useContext } from "react";
-import { AppContext } from "./AppProvider"
+import { AppContext } from "./AppProvider";
 const Home = () => {
   const { List, testimonials } = data;
   const { Featuredproducts } = useContext(AppContext);

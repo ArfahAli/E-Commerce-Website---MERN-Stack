@@ -1,15 +1,11 @@
-
 import { Link } from "react-router-dom";
 import { useEffect, useState, useMemo } from "react";
 import "./cart.css";
-import Header from "../HeaderPage/Header";
-import Footer from "../Footer/Footer";
-
 const Cart = ({ cart, handleRemove }) => {
   const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
-    setCartItems(cart || []); // Initialize with an empty array if cart is undefined
+    setCartItems(cart || []); // Initializing with an empty array if cart is undefined
   }, [cart]);
 
   const incrementQuantity = (cartIndex) => {

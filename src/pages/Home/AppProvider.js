@@ -1,13 +1,8 @@
-// // MyContext.js
-// import React from 'react';
-// const MyContext = React.createContext();
-
-// export default MyContext;
 import React, { createContext, useState } from "react";
 export const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
-   const [Featuredproducts, setFeaturedproducts] = useState([
+  const [Featuredproducts, setFeaturedproducts] = useState([
     {
       id: 1,
       image: "/ASSETS/images/product-1.jpg",
@@ -38,7 +33,7 @@ export const AppProvider = ({ children }) => {
     },
   ]);
   return (
-    <AppContext.Provider value={{ Featuredproducts}}>
+    <AppContext.Provider value={{ Featuredproducts }}>
       {children}
     </AppContext.Provider>
   );

@@ -1,6 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import List from "../../data";
 const Cards = (props) => {
   const { product, addToCart, handleProductClick } = props;
 
