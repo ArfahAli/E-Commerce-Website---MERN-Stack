@@ -31,7 +31,9 @@
 
 import React from "react";
 
-const Cards = ({ product, addToCart, handleProductClick }) => {
+const Cards = (props) => {
+  const { product, addToCart, handleProductClick} = props;
+
   return (
     <div className="col-4" key={product.id}>
       <img

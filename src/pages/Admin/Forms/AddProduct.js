@@ -52,20 +52,20 @@ const AddProduct = () => {
     });
   };
 
-  const loadData = (e) => {
-      e.preventDefault();
-      List.map((item) => {
-        let formData = {
-          id: item.id,
-    image: item.image,
-    name: item.name,
-    rating:item.rating,
-    price: item.price,
-    quantity: item.quantity,
-        };
-        addProduct(formData);
-      });
-    };
+  // const loadData = (e) => {
+  //     e.preventDefault();
+  //     List.map((item) => {
+  //       let formData = {
+  //         id: item.id,
+  //   image: item.image,
+  //   name: item.name,
+  //   rating:item.rating,
+  //   price: item.price,
+  //   quantity: item.quantity,
+  //       };
+  //       addProduct(formData);
+  //     });
+  //   };
 
 
   const handleImage = (e) => {
@@ -96,7 +96,7 @@ const AddProduct = () => {
   return (
     <div className="ContainerAdd">
       <h2>Add a New Product</h2>
-      <button onClick={loadData}>Click</button>
+      {/* <button onClick={loadData}>Click</button> */}
 
       <form onSubmit={handleSubmit} className="product-form">
         <div className="form-group">

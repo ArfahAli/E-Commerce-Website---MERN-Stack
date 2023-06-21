@@ -72,14 +72,14 @@ const Home = () => {
               />
               <h4>{product.name}</h4>
               <div className="ratings">
-                {product.rating.map((star, index) => (
-                  <i
-                    key={index}
-                    className={`fa-solid fa-star${
-                      star === 0.5 ? "-half-stroke" : ""
-                    }`}
-                  ></i>
-                ))}
+              {Array.from({ length: product.rating }).map((_, index) => (
+          <i
+            key={index}
+            className={`fa-solid fa-star${
+              product.rating - index === 0.5 ? "-half-stroke" : ""
+            }`}
+          ></i>
+        ))}
               </div>
               <h5>price: ${product.price}</h5>
             </div>
@@ -101,14 +101,14 @@ const Home = () => {
               />
               <h4>{product.name}</h4>
               <div className="ratings">
-                {product.rating.map((star, index) => (
-                  <i
-                    key={index}
-                    className={`fa-solid fa-star${
-                      star === 0.5 ? "-half-stroke" : ""
-                    }`}
-                  ></i>
-                ))}
+              {Array.from({ length: product.rating }).map((_, index) => (
+          <i
+            key={index}
+            className={`fa-solid fa-star${
+              product.rating - index === 0.5 ? "-half-stroke" : ""
+            }`}
+          ></i>
+        ))}
               </div>
               <h5>price: $ {product.price}</h5>
             </div>

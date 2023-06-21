@@ -7,9 +7,13 @@ import data from "../../data";
 import Cart from "./cart";
 import Cards from "./cards";
 import { useEffect } from "react";
+import { useContext } from 'react';
+import { ProductContext } from '../Context/productContext';
 import axios from "axios";
 
-const Products = () => {
+const Products = (props) => {
+  const { product } = useContext(ProductContext);
+
   const { List, testimonials, Featuredproducts } = data;
   const navigate = useNavigate();
   const [cart, setCart] = useState([]);
@@ -29,19 +33,8 @@ const Products = () => {
     }
   };
 
-  useEffect(() => {
-    fetchProducts();
-  }, []);
 
-  const fetchProducts = async () => {
-    try {
-      const response = await axios.get("http://localhost:8000/products");
-      setProducts(response.data);
-    } catch (error) {
-      console.error(error);
-      // Handle error
-    }
-  };
+  
 
   const handleRemove = (id) => {
     const newCart = cart.filter((item) => item.id !== id);
@@ -68,13 +61,20 @@ const Products = () => {
       </div>
       <div className="sub-containerProducts">
         <div className="rowProducts">
-          {List.map((product) => (
+
+        {product.map(
+          (product) =>
+            (
+              <Cards key={product.id} product={product} handleProductClick={handleProductClick} addToCart={addToCart}/>
+            )
+        )}
+          {/* {List.map((product) => (
             <Cards
               product={product}
               addToCart={addToCart}
               handleProductClick={handleProductClick}
             />
-          ))}
+          ))} */}
           {/* {products.map((product) => (
             <Cards
               key={product.id} // Add a unique key prop
@@ -102,7 +102,7 @@ const Products = () => {
         </div>
       </div>
      
-      <Cart cart={cart} handleRemove={handleRemove} />
+      <Cart/>
 
       <Footer />
     </div>

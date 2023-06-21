@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState, useMemo } from "react";
+import { useContext } from "react";
+import { CartContext } from "../../pages/Context/cartContext";
 import "./cart.css";
-const Cart = ({ cart, handleRemove }) => {
+const Cart = () => {
+  const { cart, setCart, handleRemove, addToCart  } = useContext(CartContext);
+
   const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {

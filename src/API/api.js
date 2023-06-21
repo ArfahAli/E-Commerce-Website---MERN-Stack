@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const fetchProducts = async () => {
+export const getProducts = async () => {
   try {
     const response = await axios.get("http://localhost:8000/products");
     return response.data;
@@ -27,4 +27,3 @@ export const addUser = async (registerData) => {
   };
 
 
-export { fetchProducts };
