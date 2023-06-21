@@ -8,7 +8,7 @@
     flex-direction: column;
 }
 .Signup h1 {
-    font-size:4.5rem;
+    font-size:3rem;
     margin-bottom: 20px;
     font-weight: bold;
     padding: 15px 0;
@@ -28,7 +28,7 @@
     border-left: none;
     border-right: none;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-size: 0.99rem;
     font-weight: bold;
     color: black;
@@ -41,6 +41,7 @@
     cursor: pointer;
     font-size: 0.99rem;
     transition: 0.3s linear;
+    margin-bottom: 10px;
 }
 .Signup form button:hover{ background-color: white;
     color: black;

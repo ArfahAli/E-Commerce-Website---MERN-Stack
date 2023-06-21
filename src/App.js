@@ -11,7 +11,12 @@ import OrderConfirmation from "./pages/Notifications/OrderConfirmation";
 import TermsConditions from "./pages/Notifications/TermsConditions";
 import About from "./pages/About/About";
 import Product2 from "./pages/Products/product2";
+import ProductForm from "./pages/Admin/Forms/ProductForm";
+import ProductSearch from "./pages/Admin/Forms/ProductSearch";
+import UpdateProduct from "./pages/Admin/Forms/UpdateProduct";
+import Admin from "./pages/Admin/AdminHeader/Admin";
 import { AppProvider } from "./pages/Home/AppProvider";
+import AddProduct from "./pages/Admin/Forms/AddProduct";
 
 function App() {
   return (
@@ -32,7 +37,11 @@ function App() {
           <Route path="/TermsConditions" element={<TermsConditions />} />
           <Route path="/About" element={<About />} />
           <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/Admin" element={<Admin />} />
           <Route path="/product2" element={<Product2 />} />
+          <Route path={'/AddProduct'} element={<AddProduct/>}/>
+      <Route path={'/UpdateProduct'} element={<UpdateProduct/>}/>
+      <Route path={'/ProductSearch'} element={<ProductSearch/>}/>
         </Routes>
       </AppProvider>
     </div>

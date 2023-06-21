@@ -60,72 +60,83 @@ h6 {
 }
 
 .btn {
-    background-color:rgb(63, 5, 63);
-    color: lavender ;
+    background-color: rgb(63, 5, 63);
+    color: lavender;
     display: inline-block;
     padding: 8px 30px;
     margin: 30px 0;
     border-radius: 30px;
 }
-.btn:hover{
-    background-color: lavender ;
-    color:rgb(63, 5, 63) ;
+
+.btn:hover {
+    background-color: lavender;
+    color: rgb(63, 5, 63);
     transition: 0.4s;
 }
 
 .header {
-    background: radial-gradient( lavender,rgb(245, 186, 232));
+    background: radial-gradient(lavender, rgb(245, 186, 232));
 }
-.header .row{
+
+.header .row {
 
     margin-top: 70px;
 }
-.categories{
+
+.categories {
     margin: 70px 0;
 }
 
-.col-3{
+.col-3 {
     flex-basis: 30%;
     min-width: 250px;
 }
-.col-3 img{
+
+.col-3 img {
     width: 100%;
     margin-top: 30px;
 }
-.sub-container{
+
+.sub-container {
     max-width: 1080px;
     margin: auto;
     padding: 0 30px;
 }
-.col-4{
+
+.col-4 {
     flex-basis: 25%;
     min-width: 200px;
     padding: 10px;
     margin-bottom: 50px;
     transition: 0.5s;
 }
-.col-4:hover{
+
+.col-4:hover {
     transform: translateY(-5px);
 }
-.col-4 img{
+
+.col-4 img {
     width: 100%;
 }
 
-.col-4 h4{
+.col-4 h4 {
     padding: 5px;
     color: #555;
     font-weight: normal;
 }
-.col-4 p{
+
+.col-4 p {
     padding: 5px;
     font-size: 14px;
 }
-.col-4 h5{
+
+.col-4 h5 {
     padding: 5px;
 
     font-size: 14px;
 }
-.tittle{
+
+.tittle {
     font-size: 30px;
     text-align: center;
     margin: 0 auto 80px;
@@ -133,7 +144,8 @@ h6 {
     line-height: 60px;
     position: relative;
 }
-.tittle::after{
+
+.tittle::after {
     content: '';
     background: red;
     width: 80px;
@@ -148,113 +160,133 @@ h6 {
 
 /* <!-- offer --> */
 
-.offer{
-    background: radial-gradient( lavender,rgb(245, 186, 232));
+.offer {
+    background: radial-gradient(lavender, rgb(245, 186, 232));
     margin-top: 80px;
     padding: 30px 0;
 }
-.offer .offer-image{
-padding: 30px;
+
+.offer .offer-image {
+    padding: 30px;
 }
-.col-2 small{
+
+.col-2 small {
     color: #2f2c2c;
 }
+
 /* testimonials */
-.testimonials{
+.testimonials {
     padding-top: 100px;
 }
-.testimonials .col-3{
+
+.testimonials .col-3 {
     text-align: center;
     padding: 40px 20px;
-    box-shadow: 0 0 20px 0px  rgba(0,0,0,0.1);
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: transform 0.5s;
 }
-.testimonials .col-3 img{
+
+.testimonials .col-3 img {
     width: 50px;
     border-radius: 50%;
     margin-top: 20px;
 }
-.testimonials .col-3:hover{
+
+.testimonials .col-3:hover {
     /* transform: translateY(-10px); */
 }
-.fa-quote-left{
+
+.fa-quote-left {
     font-size: 34px;
     color: #ff523b;
 }
-.col-3 p{
+
+.col-3 p {
     font-size: 13px;
     margin: 12px 0;
     color: #777;
 }
-.col-3 h3{
+
+.col-3 h3 {
     font-weight: 600;
     color: #4a4848;
     font-size: 16px;
 }
 
 /* <!-- brands --> */
-.brands{
-    margin: 100px 0;}
-    .col-5{
-        width: 150px;
+.brands {
+    margin: 100px 0;
+}
+
+.col-5 {
+    width: 150px;
+}
+
+.col-5 img {
+    width: 100%;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+
+.col-5 img:hover {
+    filter: grayscale(0);
+
+}
+
+@media only screen and (max-width:600px) {
+    .row {
+        text-align: center;
+
     }
-    .col-5 img{
+
+    .col-2,
+    .col-3,
+    .col-4 {
+        flex-basis: 100%;
+    }
+
+}
+
+.menu {
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    width: 28px;
+    display: none;
+}
+
+
+
+@media only screen and (max-width:800px) {
+
+    nav ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: black;
         width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 20px 20px;
+
+    }
+
+    nav ul li a {
+        color: white;
+    }
+
+    .menu {
+        display: block;
         cursor: pointer;
-        filter: grayscale(100%);
-    }
-    .col-5 img:hover{
-        filter: grayscale(0);
-
     }
 
-    @media only screen and (max-width:600px){
-        .row{
-            text-align: center;
-    
-        }
-        .col-2,.col-3,.col-4{
-            flex-basis: 100%;
-        }
-    
-        }
-    
-        .menu{
-            position: absolute;
-            top: 25px;
-            right: 10px;
-            width: 28px;
-            display: none;
-        }
-    
-    
-    
-        @media only screen and (max-width:800px) {
-    
-            nav ul{
-                position: absolute;
-                top: 70px;
-                left: 0;
-                background-color: black;
-                width: 100%;     
-                overflow: hidden; 
-                transition: max-height 0.5s;     
-            }
-            nav ul li{
-                display: block;
-                margin: 20px 20px;
-    
-            }
-            nav ul li a{
-                color: white;
-            }
-            .menu{
-                display: block;
-                cursor: pointer;
-            }
-            .cart-info p{
-                display: none;
-            }
-    
-        }
+    .cart-info p {
+        display: none;
+    }
+
+}

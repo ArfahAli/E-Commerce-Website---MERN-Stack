@@ -6,14 +6,14 @@ import "./products.css";
 import data from "../../data";
 import Cart from "./cart";
 import Cards from "./cards";
+import { useEffect } from "react";
+import axios from "axios";
 
 const Products = () => {
   const { List, testimonials, Featuredproducts } = data;
-
   const navigate = useNavigate();
-
   const [cart, setCart] = useState([]);
-  const [showCart, setShowCart] = useState(false);
+  const [products, setProducts] = useState([]);
 
   const addToCart = (data) => {
     const existingProduct = cart.find((item) => item.id === data.id);
@@ -29,8 +29,18 @@ const Products = () => {
     }
   };
 
-  const handleShow = (value) => {
-    setShowCart(value);
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  const fetchProducts = async () => {
+    try {
+      const response = await axios.get("http://localhost:8000/products");
+      setProducts(response.data);
+    } catch (error) {
+      console.error(error);
+      // Handle error
+    }
   };
 
   const handleRemove = (id) => {
@@ -65,6 +75,14 @@ const Products = () => {
               handleProductClick={handleProductClick}
             />
           ))}
+          {/* {products.map((product) => (
+            <Cards
+              key={product.id} // Add a unique key prop
+              product={product}
+              addToCart={addToCart}
+              handleProductClick={handleProductClick}
+            />
+          ))} */}
         </div>
 
         <div className="pg-btns">
@@ -83,10 +101,7 @@ const Products = () => {
           <span className="fas fa-arrow-right"></span>
         </div>
       </div>
-      {/* <Cards List={List} addToCart={addToCart} /> */}
-      {/* {
-  showCart? <Cart cart={cart} handleRemove={handleRemove} /> : null
-} */}
+     
       <Cart cart={cart} handleRemove={handleRemove} />
 
       <Footer />

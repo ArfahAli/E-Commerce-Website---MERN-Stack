@@ -1,16 +1,12 @@
+import React from "react";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import "./Header.css";
-const Header = (props) => {
-  const navigate = useNavigate();
-  function goToAbout() {
-    navigate("/About");
-  }
-
+const Admin = () => {
   return (
     <div>
+<div>
       <div className="containerHeader">
-        <div className="navbar">
+        <div className="navbar2">
           <div classNameName="logo">
             <img src="ASSETS/images/logo.png" alt="" width="100px" />
             <img
@@ -22,9 +18,6 @@ const Header = (props) => {
           </div>
           <nav>
             <ul id="MenuItems">
-            <li>
-                <Link to="/Admin">Admin</Link>
-              </li>
               <li>
                 <Link to="/">Home</Link>
               </li>
@@ -41,7 +34,6 @@ const Header = (props) => {
               <li>
                 <Link to="/LoginSignupContainer">Account</Link>
               </li>
-              {/* <li><button onClick={goToAbout}>About Us</button></li> */}
             </ul>
           </nav>
 
@@ -53,10 +45,41 @@ const Header = (props) => {
               height="30px"
             />
           </Link>
-          <sup>{props.count}</sup>
         </div>
       </div>
-    </div>
+    </div>  
+  <div class="main-container">
+  
+  <div id="navbar-sticky">
+       
+    <ul class="list">
+      <li>
+        <Link to="/AddProduct" >Add Product</Link>
+      </li>
+      
+    </ul>
+    <ul class="list">
+    <li>
+        <Link to='/UpdateProduct' >UpdateProduct</Link>
+      </li>
+      </ul>
+      <ul class="list">
+      <li>
+        <Link to="/DeleteProduct" >Delete Product</Link>
+      </li>
+      
+    </ul>
+    <ul class="list">
+      <li>
+        <Link to="/ProductSearch" >Search Product</Link>
+      </li>
+      
+    </ul>
+
+  </div>
+  </div>
+  </div>
   );
 };
-export default Header;
+
+export default Admin;
