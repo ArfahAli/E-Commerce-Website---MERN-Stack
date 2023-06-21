@@ -10,22 +10,6 @@ const Signup = () => {
     password: "",
   });
 
-  // const [username, setUsername] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
-
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-
-  //   const UserData = {
-  //     username: username,
-  //     email: email,
-  //     password: password,
-  //   };
-
-  //   addUser(UserData);
-  // };
-
   useEffect(() => {
     console.log(user);
   }, [user]);
@@ -38,12 +22,6 @@ const Signup = () => {
   const handleRegister = (e) => {
     console.log("user");
     e.preventDefault();
-
-    // const registerData = new FormData();
-    // registerData.append("UserName", user.username);
-    // registerData.append("Email", user.email);
-    // registerData.append("Password", user.password);
-
     addUser(user);
   };
   return (
