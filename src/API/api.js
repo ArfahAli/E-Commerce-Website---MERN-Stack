@@ -1,9 +1,11 @@
 import axios from "axios";
-const URL = "https://fa21-bse-080-0eb0725faa4a.herokuapp.com/";
+const URL = "https://fa21-bse-080-0eb0725faa4a.herokuapp.com";
 
 export const getProducts = async () => {
   try {
-    const response = await axios.get(`${URL}/products`);
+    console.log("API start");
+    const response = await axios.get(`${URL}`);
+    console.log("API start");
     return response.data;
   } catch (error) {
     console.error(error);
@@ -13,23 +15,23 @@ export const getProducts = async () => {
 
 const fetchProducts = async () => {
   try {
-    const response = await axios.get(`${URL}/products`);
+    const response = await axios.get(`${URL}`);
     return response.data;
   } catch (error) {
     console.error(error);
     throw new Error("Failed to fetch products");
   }
 };
-const fetchFilteredProducts = async (category) => {
-  try {
-    const response = await axios.post(`${URL}/products/category`, {
-      category: category,
-    });
-    return response.data;
-  } catch (error) {
-    // Handle error
-  }
-};
+// const fetchFilteredProducts = async (category) => {
+//   try {
+//     const response = await axios.post(`${URL}/products/category`, {
+//       category: category,
+//     });
+//     return response.data;
+//   } catch (error) {
+//     // Handle error
+//   }
+// };
 const getProductById = async (id) => {
   try {
     const item = await axios.get(URL + "/products/" + id);
@@ -40,7 +42,7 @@ const getProductById = async (id) => {
   }
 };
 
-export { fetchFilteredProducts, fetchProducts, getProductById };
+export { fetchProducts, getProductById };
 
 export const addUser = async (registerData) => {
   try {
@@ -54,7 +56,10 @@ export const addUser = async (registerData) => {
 };
 export const addProduct = async (formData) => {
   try {
-    await axios.post(`https://fa21-bse-080-0eb0725faa4a.herokuapp.com/AddProduct`, formData);
+    await axios.post(
+      `https://fa21-bse-080-0eb0725faa4a.herokuapp.com/AddProduct`,
+      formData
+    );
   } catch (error) {
     console.error(error);
   }

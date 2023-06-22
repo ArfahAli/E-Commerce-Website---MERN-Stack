@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Header from "../HeaderPage/Header";
 import Footer from "../Footer/Footer";
 import "./products.css";
-import data from "../../data";
+// import data from "../../data";
 import Cart from "./cart";
 import Cards from "./cards";
 import { useContext } from 'react';
@@ -14,7 +14,7 @@ const Products = (props) => {
   const { product } = useContext(ProductContext);
   const { cart, addToCart ,handleProductClick, } = useContext(CartContext);
 
-  const { List } = data;
+  // const { List } = data;
   // const [cart, setCart] = useState([]);
   // const [products, setProducts] = useState([]);
 
@@ -66,13 +66,13 @@ const Products = (props) => {
               <Cards key={product.id} product={product} handleProductClick={handleProductClick} addToCart={addToCart}/>
             )
         )} */}
-          {List.map((product) => (
+          {/* {List.map((product) => (
             <Cards
               product={product}
               addToCart={addToCart}
               handleProductClick={handleProductClick}
             />
-          ))}
+          ))} */}
           {product.map((product) => (
             <Cards
               key={product.id} // Add a unique key prop
