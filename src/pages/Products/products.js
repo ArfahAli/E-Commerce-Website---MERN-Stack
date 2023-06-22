@@ -3,7 +3,6 @@ import Header from "../HeaderPage/Header";
 import Footer from "../Footer/Footer";
 import "./products.css";
 // import data from "../../data";
-import Cart from "./cart";
 import Cards from "./cards";
 import { Images } from "../../data";
 import { useContext } from 'react';
