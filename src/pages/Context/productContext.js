@@ -10,7 +10,6 @@ export const ProductProvider = ({ children }) => {
     const fetchProducts = async () => {
       try {
         const response = await getProducts();
-        console.log(response);
         setProduct(response.data);
       } catch (error) {
         console.log(error);

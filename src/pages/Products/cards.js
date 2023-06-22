@@ -1,14 +1,13 @@
 
 import React from "react";
-
 const Cards = (props) => {
-  const { product, addToCart, handleProductClick} = props;
+  const { product, addToCart, handleProductClick, image} = props;
 
   return (
     <div className="col-4" key={product.id}>
-      <img
+       <img
         onClick={() => handleProductClick(product)}
-        src={product.image}
+        src={image} // Display the first image from the `images` array
         alt=""
       />
       <h4>{product.name}</h4>

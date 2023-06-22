@@ -1,7 +1,7 @@
 const List = [
   {
     id: 1,
-    image: "//ProductImages/product-5.jpg",
+    image: "/ASSETS/IMAGES/product-1.jpg",
     name: "Grey Shoes",
     rating: 1,
     price: 50.0,
@@ -9,7 +9,7 @@ const List = [
   },
   {
     id: 2,
-    image: "//ProductImages/product-6.jpg",
+    image: "/ASSETS/IMAGES/product-2.jpg",
     name: "Black T-Shirt",
     rating: 3,
     price: 60.0,
@@ -17,7 +17,7 @@ const List = [
   },
   {
     id: 3,
-    image: "//ProductImages/product-7.jpg",
+    image: "/ASSETS/IMAGES/product-3.jpg",
     name: "3-Pair of Sockes",
     rating: 4,
     price: 30.0,
@@ -25,7 +25,7 @@ const List = [
   },
   {
     id: 4,
-    image: "//ProductImages/product-8.jpg",
+    image: "/ASSETS/IMAGES/product-4.jpg",
     name: "Fossil Watch",
     rating: 1,
     price: 80.0,
@@ -33,7 +33,7 @@ const List = [
   },
   {
     id: 5,
-    image: "//ProductImages/product-9.jpg",
+    image: "/ASSETS/IMAGES/product-5.jpg",
     name: "Watch",
     rating: 3,
     price: 80.0,
@@ -41,7 +41,7 @@ const List = [
   },
   {
     id: 6,
-    image: "//ProductImages/product-10.jpg",
+    image: "/ASSETS/IMAGES/product-6.jpg",
     name: "Black Sneakers",
     rating: 3,
     price: 50.0,
@@ -49,7 +49,7 @@ const List = [
   },
   {
     id: 7,
-    image: "//ProductImages/product-11.jpg",
+    image: "/ASSETS/IMAGES/product-7.jpg",
     name: "Brown Trouser",
     rating: 3,
     price: 60.0,
@@ -57,7 +57,7 @@ const List = [
   },
   {
     id: 8,
-    image: "//ProductImages/product-12.jpg",
+    image: "/ASSETS/IMAGES/product-8.jpg",
     name: "Comfy Shoes",
     rating: 5,
     price: 70.0,
@@ -65,7 +65,7 @@ const List = [
   },
   {
     id: 9,
-    image: "//ProductImages/product-5.jpg",
+    image: "/ASSETS/IMAGES/product-9.jpg",
     name: "Red T-Shirt",
     rating: 1,
     price: 50.0,
@@ -73,7 +73,7 @@ const List = [
   },
   {
     id: 10,
-    image: "//ProductImages/product-6.jpg",
+    image: "/ASSETS/IMAGES/product-10.jpg",
     name: "Grey Sneakers",
     rating: 3,
     price: 40.0,
@@ -81,7 +81,7 @@ const List = [
   },
   {
     id: 11,
-    image: "//ProductImages/product-7.jpg",
+    image: "/ASSETS/IMAGES/product-11.jpg",
     name: "Socks",
     rating: 3,
     price: 60.0,
@@ -89,7 +89,7 @@ const List = [
   },
   {
     id: 12,
-    image: "//ProductImages/product-8.jpg",
+    image: "/ASSETS/IMAGES/product-12.jpg",
     name: "Sneakers",
     rating: 3,
     price: 70.0,
@@ -122,6 +122,36 @@ const testimonials = [
     name: "Hifsa Rehman",
   },
 ];
+
+export const Images = [
+  {
+    image: "/ASSETS/IMAGES/product-1.jpg"
+  },
+  { image: "/ASSETS/IMAGES/product-2.jpg" },
+  { image: "/ASSETS/IMAGES/product-3.jpg" },
+  { image: "/ASSETS/IMAGES/product-4.jpg" },
+  { image: "/ASSETS/IMAGES/product-5.jpg" },
+  { image: "/ASSETS/IMAGES/product-6.jpg" },
+  { image: "/ASSETS/IMAGES/product-7.jpg" },
+  { image: "/ASSETS/IMAGES/product-8.jpg" },
+  { image: "/ASSETS/IMAGES/product-9.jpg" },
+  { image: "/ASSETS/IMAGES/product-10.jpg" },
+  { image: "/ASSETS/IMAGES/product-11.jpg" },
+  { image: "/ASSETS/IMAGES/product-12.jpg" },
+  { image: "/ASSETS/IMAGES/product-1.jpg" },
+  { image: "/ASSETS/IMAGES/product-2.jpg" },
+  { image: "/ASSETS/IMAGES/product-3.jpg" },
+  { image: "/ASSETS/IMAGES/product-4.jpg" },
+  { image: "/ASSETS/IMAGES/product-6.jpg" },
+  { image: "/ASSETS/IMAGES/product-5.jpg" },
+  { image: "/ASSETS/IMAGES/product-7.jpg" },
+  { image: "/ASSETS/IMAGES/product-8.jpg" },
+  { image: "/ASSETS/IMAGES/product-9.jpg" },
+  { image: "/ASSETS/IMAGES/product-10.jpg" },
+];
+
+
+
 
 const value = { List, testimonials };
 export default value;
