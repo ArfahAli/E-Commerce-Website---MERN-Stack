@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Header from "../HeaderPage/Header";
 import Footer from "../Footer/Footer";
@@ -8,12 +8,11 @@ import Cart from "./cart";
 import Cards from "./cards";
 
 const Product2 = () => {
-  const { List, testimonials, Featuredproducts } = data;
+  const { List } = data;
 
   const navigate = useNavigate();
 
   const [cart, setCart] = useState([]);
-  const [showCart, setShowCart] = useState(false);
 
   const addToCart = (data) => {
     const existingProduct = cart.find((item) => item.id === data.id);
@@ -29,9 +28,7 @@ const Product2 = () => {
     }
   };
 
-  const handleShow = (value) => {
-    setShowCart(value);
-  };
+ 
 
   const handleRemove = (id) => {
     const newCart = cart.filter((item) => item.id !== id);

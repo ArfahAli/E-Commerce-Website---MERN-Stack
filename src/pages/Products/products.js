@@ -1,49 +1,47 @@
-import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { Link } from "react-router-dom";
 import Header from "../HeaderPage/Header";
 import Footer from "../Footer/Footer";
 import "./products.css";
 import data from "../../data";
 import Cart from "./cart";
 import Cards from "./cards";
-import { useEffect } from "react";
 import { useContext } from 'react';
 import { ProductContext } from '../Context/productContext';
-import axios from "axios";
+import { CartContext } from '../Context/cartContext';
+
 
 const Products = (props) => {
   const { product } = useContext(ProductContext);
+  const { cart, addToCart ,handleProductClick, } = useContext(CartContext);
 
-  const { List, testimonials, Featuredproducts } = data;
-  const navigate = useNavigate();
-  const [cart, setCart] = useState([]);
-  const [products, setProducts] = useState([]);
+  const { List } = data;
+  // const [cart, setCart] = useState([]);
+  // const [products, setProducts] = useState([]);
 
-  const addToCart = (data) => {
-    const existingProduct = cart.find((item) => item.id === data.id);
-    if (existingProduct) {
-      // Product already exists in the cart, update the quantity
-      const updatedCart = cart.map((item) =>
-        item.id === data.id ? { ...item, quantity: item.quantity + 1 } : item
-      );
-      setCart(updatedCart);
-    } else {
-      // Product doesn't exist in the cart, add it with quantity 1
-      setCart([...cart, { ...data, quantity: 1 }]);
-    }
-  };
-
+  // const addToCart = (data) => {
+  //   const existingProduct = cart.find((item) => item.id === data.id);
+  //   if (existingProduct) {
+  //     // Product already exists in the cart, update the quantity
+  //     const updatedCart = cart.map((item) =>
+  //       item.id === data.id ? { ...item, quantity: item.quantity + 1 } : item
+  //     );
+  //     setCart(updatedCart);
+  //   } else {
+  //     // Product doesn't exist in the cart, add it with quantity 1
+  //     setCart([...cart, { ...data, quantity: 1 }]);
+  //   }
+  // };
 
   
 
-  const handleRemove = (id) => {
-    const newCart = cart.filter((item) => item.id !== id);
-    setCart(newCart);
-  };
+  // const handleRemove = (id) => {
+  //   const newCart = cart.filter((item) => item.id !== id);
+  //   setCart(newCart);
+  // };
 
-  const handleProductClick = (product) => {
-    navigate(`/product/${product.id}`, { state: { product } });
-  };
+  // const handleProductClick = (product) => {
+  //   navigate(`/product/${product.id}`, { state: { product } });
+  // };
   return (
     <div>
       <Header count={cart.length} />
@@ -62,27 +60,27 @@ const Products = (props) => {
       <div className="sub-containerProducts">
         <div className="rowProducts">
 
-        {product.map(
+        {/* {product.map(
           (product) =>
             (
               <Cards key={product.id} product={product} handleProductClick={handleProductClick} addToCart={addToCart}/>
             )
-        )}
-          {/* {List.map((product) => (
+        )} */}
+          {List.map((product) => (
             <Cards
               product={product}
               addToCart={addToCart}
               handleProductClick={handleProductClick}
             />
-          ))} */}
-          {/* {products.map((product) => (
+          ))}
+          {product.map((product) => (
             <Cards
               key={product.id} // Add a unique key prop
               product={product}
               addToCart={addToCart}
               handleProductClick={handleProductClick}
             />
-          ))} */}
+          ))}
         </div>
 
         <div className="pg-btns">

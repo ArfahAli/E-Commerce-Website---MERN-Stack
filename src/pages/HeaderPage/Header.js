@@ -1,11 +1,7 @@
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import "./Header.css";
 const Header = (props) => {
-  const navigate = useNavigate();
-  function goToAbout() {
-    navigate("/About");
-  }
+  
 
   return (
     <div>
@@ -41,7 +37,6 @@ const Header = (props) => {
               <li>
                 <Link to="/LoginSignupContainer">Account</Link>
               </li>
-              {/* <li><button onClick={goToAbout}>About Us</button></li> */}
             </ul>
           </nav>
 

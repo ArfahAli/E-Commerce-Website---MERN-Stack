@@ -3,6 +3,7 @@ import "./Signup.css";
 import { useState } from "react";
 import { addUser } from "../API/api.js";
 import { useEffect } from "react";
+
 const Signup = () => {
   const [user, setUser] = useState({
     username: "",
@@ -19,10 +20,13 @@ const Signup = () => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
 
-  const handleRegister = (e) => {
+  const handleRegister =  (e) => {
+    alert('User added successfully');
     console.log("user");
     e.preventDefault();
     addUser(user);
+    
+
   };
   return (
     <div className="Signup">

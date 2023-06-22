@@ -1,8 +1,8 @@
 import Home from "./pages/Home/Home";
 import Products from "./pages/Products/products";
 import Cart from "./pages/Products/cart";
-import { Routes, Route, BrowserRouter, Link } from "react-router-dom";
-import React, { useState } from "react";
+import { Routes, Route} from "react-router-dom";
+import React from "react";
 import ProductDetail from "./pages/Products/ProductDetails";
 import LoginSignupContainer from "./Components/LoginSignupContainer";
 import Contactus from "./pages/Contact/Contactus";
@@ -11,9 +11,8 @@ import OrderConfirmation from "./pages/Notifications/OrderConfirmation";
 import TermsConditions from "./pages/Notifications/TermsConditions";
 import About from "./pages/About/About";
 import Product2 from "./pages/Products/product2";
-import ProductForm from "./pages/Admin/Forms/ProductForm";
 import ProductSearch from "./pages/Admin/Forms/ProductSearch";
-import UpdateProduct from "./pages/Admin/Forms/UpdateProduct";
+import DeleteProduct from "./pages/Admin/Forms/DeleteProduct";
 import Admin from "./pages/Admin/AdminHeader/Admin";
 import { AppProvider } from "./pages/Home/AppProvider";
 import AddProduct from "./pages/Admin/Forms/AddProduct";
@@ -40,7 +39,7 @@ function App() {
           <Route path="/Admin" element={<Admin />} />
           <Route path="/product2" element={<Product2 />} />
           <Route path={'/AddProduct'} element={<AddProduct/>}/>
-      <Route path={'/UpdateProduct'} element={<UpdateProduct/>}/>
+      <Route path={'/DeleteProduct'} element={<DeleteProduct/>}/>
       <Route path={'/ProductSearch'} element={<ProductSearch/>}/>
         </Routes>
       </AppProvider>

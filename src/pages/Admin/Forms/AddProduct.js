@@ -1,21 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { addProduct } from "../../../API/api";
 import { useNavigate } from "react-router-dom";
-import data from "../../../data";
-import axios from "axios";
 import "./AddProduct.css";
 const AddProduct = () => {
-  const [selectedCategory, setSelectedCategory] = useState("");
-  const { List, testimonials, Featuredproducts } = data;
+ 
 
-  // const [product, setProduct] = useState({
-  //   id: 0,
-  //   image: null,
-  //   name: "",
-  //   rating: [0, 0, 0, 0, 0],
-  //   price: 0,
-  //   quantity: 0,
-  // });
+
   const [formData, setFormData] = useState({
     id: 0,
     image: '',
@@ -44,7 +34,7 @@ const AddProduct = () => {
     addProduct(formData);
     setFormData({
       id: 0,
-    image: '',
+    image: "",
     name: "",
     rating: 0,
     price: 0,
@@ -68,10 +58,10 @@ const AddProduct = () => {
   //   };
 
 
-  const handleImage = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.files[0] });
-    console.log(formData);
-  };
+  // const handleImage = (e) => {
+  //   setFormData({ ...formData, [e.target.name]: e.target.files[0] });
+  //   console.log(formData);
+  // };
 
   const Navigate = useNavigate();
 
@@ -79,23 +69,9 @@ const AddProduct = () => {
     Navigate("/Admin");
   };
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-
-  //   const formData = new FormData();
-  //   formData.append("title", product.title);
-  //   formData.append("price", product.price);
-  //   formData.append("description", product.description);
-  //   formData.append("image", product.image);
-  //   formData.append("rating[rate]", product.rating.rate);
-  //   formData.append("rating[count]", product.rating.count);
-
-  //   await addProduct(formData);
-  // }
-
   return (
     <div className="ContainerAdd">
-      <h2>Add a New Product</h2>
+      <h2 style={{textAlign:"center"}}>Add a New Product</h2>
       {/* <button onClick={loadData}>Click</button> */}
 
       <form onSubmit={handleSubmit} className="product-form">
@@ -149,7 +125,7 @@ const AddProduct = () => {
         <div className="form-group">
           <label htmlFor="rating">Rating:</label>
           <input
-            type="rating"
+            type="number"
             className="form-control"
             id="rating"
             name="rating"

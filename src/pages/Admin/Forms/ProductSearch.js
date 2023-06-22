@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const ProductSearch = () => {
   const [productId, setProductId] = useState('');
-  const [product, setProduct] = useState(null);
+  const [product] = useState(null);
   const [isEditMode, setIsEditMode] = useState(false);
   const [updatedProductData, setUpdatedProductData] = useState({});
 

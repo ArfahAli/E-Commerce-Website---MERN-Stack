@@ -38,7 +38,7 @@ const About = () => {
         <div className="columnTeam">
           <div className="cardTeam">
             <img
-              src="ASSETS/images/Team1 (2).jpg"
+              src="ASSETS/images/Team1.jpg"
               alt="Mike"
               style={{ width: "100%" }}
             />
@@ -57,7 +57,7 @@ const About = () => {
         <div className="columnTeam">
           <div className="cardTeam">
             <img
-              src="ASSETS/images/Team1 (1).jpg"
+              src="ASSETS/images/Team1.jpg"
               alt="John"
               style={{ width: "100%" }}
             />
@@ -74,7 +74,6 @@ const About = () => {
         </div>
       </div>
 
-      <h2></h2>
       <Footer />
     </div>
   );

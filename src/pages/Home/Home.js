@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Header from "../HeaderPage/Header";
 import Footer from "../Footer/Footer";
 import data from "../../data";
@@ -29,9 +29,8 @@ const Home = () => {
                 Success isn't always about greatness. It's about consistency.
                 Consistet <br /> hard work gains Success. Greatness will come.
               </p>
-              <a href="" className="btn">
-                Explore Now <i className="fas fa-arrow-right"></i>
-              </a>
+              <Link to="" className="btn" >Explore Now <i className="fas fa-arrow-right"></i></Link>
+              
             </div>
             <div className="col-2">
               <img src="ASSETS/images/image1.png" alt="" />
@@ -40,7 +39,6 @@ const Home = () => {
         </div>
       </div>
 
-      {/* <!-- Featured categories --> */}
 
       <div className="categories">
         <div className="sub-container">
@@ -136,9 +134,9 @@ const Home = () => {
                 AMOLED color full touch display with adjustable brightness, so
                 everything is clear as can be.
               </small>
-              <a href="" className="btn">
-                Buy Now <i className="fas fa-arrow-right"></i>
-              </a>
+              <Link to="" className="btn" >Buy Now <i className="fas fa-arrow-right"></i></Link>
+
+              
             </div>
           </div>
         </div>

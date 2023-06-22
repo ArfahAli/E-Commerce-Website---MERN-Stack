@@ -1,41 +1,40 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState, useMemo } from "react";
 import { useContext } from "react";
 import { CartContext } from "../../pages/Context/cartContext";
 import "./cart.css";
 const Cart = () => {
-  const { cart, setCart, handleRemove, addToCart  } = useContext(CartContext);
+  const {  handleRemove,decrementQuantity,incrementQuantity,totalPrice,cartItems } = useContext(CartContext);
 
-  const [cartItems, setCartItems] = useState([]);
+  // const [cartItems, setCartItems] = useState([]);
 
-  useEffect(() => {
-    setCartItems(cart || []); // Initializing with an empty array if cart is undefined
-  }, [cart]);
+  // useEffect(() => {
+  //   setCartItems(cart || []); // Initializing with an empty array if cart is undefined
+  // }, [cart]);
 
-  const incrementQuantity = (cartIndex) => {
-    setCartItems((prevCartItems) => {
-      return prevCartItems.map((item, index) =>
-        cartIndex === index ? { ...item, quantity: item.quantity + 1 } : item
-      );
-    });
-  };
+  // const incrementQuantity = (cartIndex) => {
+  //   setCartItems((prevCartItems) => {
+  //     return prevCartItems.map((item, index) =>
+  //       cartIndex === index ? { ...item, quantity: item.quantity + 1 } : item
+  //     );
+  //   });
+  // };
 
-  const decrementQuantity = (cartIndex) => {
-    setCartItems((prevCartItems) => {
-      return prevCartItems.map((item, index) =>
-        cartIndex === index && item.quantity > 1
-          ? { ...item, quantity: item.quantity - 1 }
-          : item
-      );
-    });
-  };
+  // const decrementQuantity = (cartIndex) => {
+  //   setCartItems((prevCartItems) => {
+  //     return prevCartItems.map((item, index) =>
+  //       cartIndex === index && item.quantity > 1
+  //         ? { ...item, quantity: item.quantity - 1 }
+  //         : item
+  //     );
+  //   });
+  // };
 
-  const totalPrice = useMemo(() => {
-    return cartItems.reduce(
-      (total, item) => total + item.price * item.quantity,
-      0
-    );
-  }, [cartItems]);
+  // const totalPrice = useMemo(() => {
+  //   return cartItems.reduce(
+  //     (total, item) => total + item.price * item.quantity,
+  //     0
+  //   );
+  // }, [cartItems]);
 
   return (
     <div>

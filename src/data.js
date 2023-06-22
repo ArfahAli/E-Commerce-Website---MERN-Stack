@@ -1,7 +1,7 @@
  const List = [
   {
     id: 1,
-    image: require("//ProductImages/product-5.jpg"),
+    image: "//ProductImages/product-5.jpg",
     name: "Grey Shoes",
     rating: 1,
     price: 50.00,
@@ -9,7 +9,7 @@
   },
   {
     id: 2,
-    image: require("//ProductImages/product-6.jpg"),
+    image: "//ProductImages/product-6.jpg",
     name: "Black T-Shirt",
     rating: 3,
     price: 60.00,
@@ -134,4 +134,5 @@ const testimonials=[
   },
 ];
 
-export default {List,testimonials};
+const value= {List, testimonials};
+export default value;

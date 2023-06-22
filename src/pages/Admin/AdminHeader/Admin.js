@@ -49,16 +49,16 @@ const Admin = () => {
       </div>
     </div>  
   <div class="main-container">
-  
+  <h1 style={{textAlign:"center", marginTop:"100px"}}>Welcome To Admin Pannel</h1>
+
   <div id="navbar-sticky">
-       
     <ul class="list">
       <li>
         <Link to="/AddProduct" >Add Product</Link>
       </li>
       
     </ul>
-    <ul class="list">
+    {/* <ul class="list">
     <li>
         <Link to='/UpdateProduct' >UpdateProduct</Link>
       </li>
@@ -74,7 +74,7 @@ const Admin = () => {
         <Link to="/ProductSearch" >Search Product</Link>
       </li>
       
-    </ul>
+    </ul> */}
 
   </div>
   </div>
